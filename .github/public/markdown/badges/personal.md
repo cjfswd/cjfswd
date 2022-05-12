@@ -1,0 +1,10 @@
+![web-developer](https://img.shields.io/badge/-👨🏽‍💻%20web%20developer-000000)
+![full-stack](https://img.shields.io/badge/-💯%20full%20stack-000000)
+![auto-didata](https://img.shields.io/badge/-🧠%20auto%20didata-000000)
+![estoico](https://img.shields.io/badge/-🙏🏼%20estoico-000000)
+![eclético](https://img.shields.io/badge/-🌌%20eclético-000000)
+![minimalista](https://img.shields.io/badge/-📋%20minimalista-000000)
+![social-liberalista](https://img.shields.io/badge/-🗳️%20social%20liberalista-000000)
+![gamer](https://img.shields.io/badge/-🎮%20gamer-000000)
+![geek](https://img.shields.io/badge/-💿%20geek-000000)
+
