@@ -1,0 +1,31 @@
+import { MainNavItem, SidebarNavItem } from "types/nav"
+
+interface DocsConfig {
+    mainNav: MainNavItem[]
+    sidebarNav: SidebarNavItem[]
+}
+
+export const docsConfig: DocsConfig = {
+    mainNav: [
+        {
+            title: "Ínicio",
+            href: "/",
+        },
+        {
+            title: "Blog",
+            href: "/blog",
+        },
+        {
+            title: "Contato",
+        },
+        // {
+        //     title: "Portfólio",
+        //     href: "/portfolio",
+        // },
+        // {
+        //     title: "Códigos",
+        //     href: "/snippets",
+        // },
+    ],
+    sidebarNav: [],
+}
