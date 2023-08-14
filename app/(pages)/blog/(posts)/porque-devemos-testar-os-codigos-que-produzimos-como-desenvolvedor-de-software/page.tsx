@@ -4,7 +4,7 @@ export const categories = ['test']
 export default function Page() {
     return (<>
         <h1>Porque devemos testar os códigos que produzimos como desenvolvedor de software ?</h1>
-        <div className='mb-10 mt-3'>{categories.map(item => <Badge>{item}</Badge>)}</div>
+        <div className='mb-10 mt-3'>{categories.map((item, index) => <Badge key={index}>{item}</Badge>)}</div>
         <p>Como programadores, somos responsáveis por criar e desenvolver software de qualidade para atender às necessidades dos usuários. No entanto, muitas vezes, o processo de desenvolvimento concentra-se principalmente na codificação e no design, deixando os testes em segundo plano. Neste artigo, exploraremos a importância de testar o software que produzimos e como isso pode contribuir para alcançar resultados excepcionais. Embora não seja mencionado o princípio de Pareto, compartilharemos informações cruciais que podem otimizar nosso trabalho, aproveitando ao máximo nosso tempo e esforço.</p>
         <h2>Identificação de erros</h2>
         <p>O teste de software nos permite identificar e corrigir erros antes que eles cheguem aos usuários finais. Ao encontrar e solucionar problemas durante as fases iniciais de desenvolvimento, podemos evitar retrabalho e economizar tempo e recursos.</p>

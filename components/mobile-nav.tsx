@@ -49,7 +49,7 @@ export function MobileNav() {
                   >
                     {item.title}
                   </MobileLink>
-                ) : <ContactModal key={index}><span className="cursor-pointer">Contato</span></ContactModal>
+                ) : <ContactModal key={index}><span key={'spanChild'} className="cursor-pointer">Contato</span></ContactModal>
             )}
           </div>
           <div className="flex flex-col space-y-2">

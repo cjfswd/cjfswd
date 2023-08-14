@@ -12,11 +12,11 @@ import {
 import Link from "next/link"
 import { Icons } from '@/components/icons'
 
-export default function DialogDemo({ children }: { children?: React.ReactElement }) {
+export default function DialogDemo({ children, key }: { children?: React.ReactElement, key?: React.Key | null | undefined }) {
     return (
-        <Dialog>
+        <Dialog key={key}>
             <DialogTrigger asChild>
-                {children ? children : <span className={cn(
+                {children ? children : <span key={key} className={cn(
                     "flex cursor-pointer items-center text-sm font-medium text-muted-foreground",
                 )}>Contato</span>}
             </DialogTrigger>

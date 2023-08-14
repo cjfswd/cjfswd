@@ -14,7 +14,7 @@ export const categories = ['tool']
 export default async function Page() {
     return (<>
         <h1>Ferramentas comuns no desenvolvimento de software</h1>
-        <div className='mb-10 mt-3'>{categories.map(item => <Badge>{item}</Badge>)}</div>
+        <div className='mb-10 mt-3'>{categories.map((item, index) => <Badge key={index}>{item}</Badge>)}</div>
         <p>O desenvolvimento de software é um campo dinâmico, repleto de uma ampla gama de ferramentas para auxiliar os desenvolvedores em suas tarefas diárias. Neste artigo, exploraremos as principais ferramentas utilizadas no ecossistema Node.js, JavaScript e TypeScript, e como elas podem ser utilizadas para obter resultados excepcionais.</p>
         <h2>Ambientes de Desenvolvimento Integrado(IDEs) / Editores de Código</h2>
         <div className="relative aspect-[42/9]"><Image src={IDE} fill={true} alt={"wtf"} loading='lazy' className=" rounded object-cover" /></div> 

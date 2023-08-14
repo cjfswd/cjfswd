@@ -31,7 +31,7 @@ export function MainNav({ items }: MainNavProps) {
               >
                 {item.title}
               </Link>
-            ) : (<ContactModal />)
+            ) : (<ContactModal key={index} />)
           )}
         </nav>
       ) : null}

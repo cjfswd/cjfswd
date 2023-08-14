@@ -5,7 +5,7 @@ export default function Page() {
     return (
         <>
             <h1>Por que Tailwind CSS se Tornou Tão Popular?</h1>
-            <div className='mb-10 mt-3'>{categories.map(item => <Badge>{item}</Badge>)}</div>
+            <div className='mb-10 mt-3'>{categories.map((item, index) => <Badge key={index}>{item}</Badge>)}</div>
             <p>Nos últimos anos, uma nova ferramenta tem ganhado cada vez mais popularidade entre os desenvolvedores front-end: o Tailwind CSS. Essa biblioteca de classes utilitárias tem sido amplamente adotada em projetos de web design e desenvolvimento, e há várias razões pelas quais ela se tornou tão popular. Neste artigo, exploraremos as principais características do Tailwind CSS que contribuíram para sua ascensão e como ele pode ajudar os desenvolvedores a alcançar resultados incríveis.</p>
             <h2>1. Abordagem funcional:</h2>
             <p>Ao contrário de outras estruturas CSS, o Tailwind não se concentra em componentes pré-estilizados. Em vez disso, ele oferece um conjunto de classes utilitárias que podem ser aplicadas diretamente no HTML para estilizar elementos. Essa abordagem funcional proporciona uma flexibilidade excepcional, permitindo aos desenvolvedores criar estilos personalizados de maneira rápida e eficiente.</p>

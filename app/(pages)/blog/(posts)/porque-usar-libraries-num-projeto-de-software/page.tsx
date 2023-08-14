@@ -4,7 +4,7 @@ export const categories = ['library']
 export default function Page() {
     return (<>
         <h1>Por que Usar Libraries em um Projeto de Software</h1>
-        <div className='mb-10 mt-3'>{categories.map(item => <Badge>{item}</Badge>)}</div>
+        <div className='mb-10 mt-3'>{categories.map((item, index) => <Badge key={index}>{item}</Badge>)}</div>
         <p>Ao desenvolver um projeto de software, é essencial adotar abordagens eficientes que maximizem a produtividade e a qualidade do resultado final. Uma das melhores maneiras de alcançar esse objetivo é aproveitar o poder das bibliotecas (ou libraries) disponíveis. Neste artigo, vamos explorar algumas razões importantes para utilizar libraries em seus projetos de software.</p>
         <h2>1. Reutilização de código:</h2>
         <p>Uma das maiores vantagens das libraries é a capacidade de reutilizar o código existente. Ao invés de começar do zero, você pode aproveitar soluções prontas e testadas, economizando tempo e esforço. Com apenas algumas linhas de código, é possível integrar funcionalidades complexas em seu projeto.</p>

@@ -1,4 +1,5 @@
 export const posts = [
+    { path: '/blog/development/desenvolvendo-e-publicando-uma-api-na-vercel', title: 'Desenvolvendo e publicando uma API na Vercel' },
     { path: '/blog/database/quando-usar-sql-nosql-e-grafos', title: 'Quando usar SQL, NoSQL e Grafos ?' },
     { path: '/blog/development/conhecimentos-que-todos-desenvolvedores-deveriam-conhecer', title: 'Conhecimentos que todos desenvolvedores deveriam conhecer' },
     { path: '/blog/development/o-minimo-que-voce-precisa-saber-antes-de-comecar-a-desenvolver-software', title: 'O minimo que voce precisa saber antes de comecar a desenvolver software' },

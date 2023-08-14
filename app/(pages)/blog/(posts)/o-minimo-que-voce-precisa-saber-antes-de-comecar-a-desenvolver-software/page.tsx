@@ -7,7 +7,7 @@ export const categories = ['development']
 export default function Page() {
     return (<>
         <h1>O mínimo que você precisa saber antes de começar a desenvolver software</h1>
-        <div className='mb-10 mt-3'>{categories.map(item => <Badge>{item}</Badge>)}</div>
+        <div className='mb-10 mt-3'>{categories.map((item, index) => <Badge key={index}>{item}</Badge>)}</div>
         <div className="grid grid-cols-3 gap-2 ml:gap-6">
             <p className="col-span-3">Você está prestes a mergulhar no mundo da programação e é natural sentir-se sobrecarregado com a quantidade de informações disponíveis. Para ajudá-lo nessa jornada, vou compartilhar com você o conteúdo mais importante que irá impulsionar seus resultados. Aproveite as dicas a seguir para começar com o pé direito!</p>
             <div className="col-span-2 ml:col-span-2 sm:col-span-1">

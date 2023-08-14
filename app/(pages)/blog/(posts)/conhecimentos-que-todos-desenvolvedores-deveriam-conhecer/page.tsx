@@ -6,7 +6,7 @@ export const categories = ['development']
 export default async function Page() {
     return (<>
         <h1>Conhecimentos Básicos para Iniciantes em Programação</h1>
-        <div className='mb-10 mt-3'>{categories.map(item => <Badge>{item}</Badge>)}</div>
+        <div className='mb-10 mt-3'>{categories.map((item, index) => <Badge key={index}>{item}</Badge>)}</div>
         <p>Se você está começando sua jornada na programação, provavelmente já ouviu falar sobre a quantidade de informações e conceitos complexos envolvidos nesse campo. Pode parecer assustador, mas tenha certeza de que você não está sozinho. Para ajudá-lo a trilhar esse caminho desafiador, vamos compartilhar com você algumas informações fundamentais que irão impulsionar seus resultados.</p>
         <div className='grid grid-cols-1 gap-x-8 gap-y-6 ml:grid-cols-2'>
             <div>

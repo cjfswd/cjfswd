@@ -14,7 +14,7 @@ export const categories = ['framework']
 export default function Page() {
     return (<>
         <h1>Por que usar frameworks em um projeto?</h1>
-        <div className='mb-10 mt-3'>{categories.map(item => <Badge>{item}</Badge>)}</div>
+        <div className='mb-10 mt-3'>{categories.map((item, index) => <Badge key={index}>{item}</Badge>)}</div>
         <p>Ao desenvolver um projeto, seja ele um site, um aplicativo ou qualquer outra aplicação de software, uma das decisões cruciais a serem tomadas é a escolha do framework adequado. Os frameworks são conjuntos de ferramentas e bibliotecas que facilitam o desenvolvimento, fornecendo uma estrutura e abstração para resolver problemas comuns. Neste artigo, vamos explorar algumas das principais razões pelas quais usar frameworks pode trazer grandes benefícios para o seu projeto, permitindo alcançar resultados superiores.</p>
         <div className='grid grid-cols-3 gap-12'>
             <div className='col-span-2'>

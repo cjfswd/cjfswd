@@ -8,7 +8,7 @@ export const categories = ['development']
 export default function Page() {
     return (<>
         <h1>Por que você deveria aprender programar sistemas computacionais</h1>
-        <div className='mb-10 mt-3'>{categories.map(item => <Badge>{item}</Badge>)}</div>
+        <div className='mb-10 mt-3'>{categories.map((item, index) => <Badge key={index}>{item}</Badge>)}</div>
         <p>Aprender programação de sistemas computacionais pode abrir portas incríveis de oportunidades e trazer inúmeros benefícios para sua carreira e desenvolvimento pessoal. Neste post, vou compartilhar com você os principais motivos pelos quais aprender programação de sistemas computacionais é tão valioso, destacando os aspectos mais relevantes que impulsionarão seus resultados. Então, vamos lá!</p>
         <div className='mt-12 grid grid-cols-3 gap-x-6 gap-y-8'>
             <div className='col-span-2'>

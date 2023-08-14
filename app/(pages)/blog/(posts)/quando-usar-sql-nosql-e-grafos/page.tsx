@@ -6,7 +6,7 @@ export const categories = ['database']
 export default function Page() {
     return (<>
         <h1>Quando usar SQL, NoSQL e Grafos</h1>
-        <div className='mb-10 mt-3'>{categories.map(item => <Badge>{item}</Badge>)}</div>
+        <div className='mb-10 mt-3'>{categories.map((item, index) => <Badge key={index}>{item}</Badge>)}</div>
         <p>Ao trabalhar com bancos de dados, é fundamental escolher a abordagem certa para atender às necessidades específicas do seu projeto. Existem diferentes tipos de bancos de dados, cada um com suas vantagens e desvantagens. Neste artigo, exploraremos quando usar SQL, NoSQL e grafos, destacando as características mais relevantes de cada um.</p>
         <h2>SQL (Structured Query Language)</h2>
         <p>O SQL é amplamente utilizado e conhecido por sua capacidade de lidar com dados estruturados. Ele é uma ótima escolha quando você tem uma estrutura de dados rígida e precisa garantir a integridade e a consistência dos dados. Aqui estão alguns casos em que o SQL se destaca:</p>

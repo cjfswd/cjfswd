@@ -10,7 +10,7 @@ export const categories = ['markup']
 export default function Page() {
     return (<>
         <h1>Por que Linguagens de Marcação Não São Consideradas Linguagens de Programação</h1>
-        <div className='mb-10 mt-3'>{categories.map(item => <Badge>{item}</Badge>)}</div>
+        <div className='mb-10 mt-3'>{categories.map((item, index) => <Badge key={index}>{item}</Badge>)}</div>
         <p>No vasto universo da programação, existem diferentes tipos de linguagens que desempenham papéis distintos e atendem a diferentes propósitos. Entre elas, destacam-se as linguagens de marcação, como HTML (Hypertext Markup Language) e XML (Extensible Markup Language). Embora essas linguagens sejam amplamente utilizadas e desempenhem um papel essencial na construção de páginas web e estruturação de dados, elas não são consideradas linguagens de programação propriamente ditas. Neste artigo, vamos explorar as razões por trás dessa distinção e entender o que torna as linguagens de marcação diferentes das linguagens de programação.</p>
         <div className="relative mt-3 hidden aspect-[42/9] ml:block"><Image src={Structure} fill={true} alt={"wtf"} className="rounded object-cover" /></div>
         <div className='mt-8 flex flex-col gap-3 ml:grid ml:grid-cols-4 ml:gap-4 sm:gap-6'>
