@@ -5,6 +5,7 @@ const nextConfig = {
     appDir: true,
     mdxRs: true,
   },
+  crossOrigin:'anonymous'
 }
 
 const withMDX = require('@next/mdx')({

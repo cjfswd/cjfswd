@@ -1,28 +1,20 @@
-import "@/styles/globals.css"
-
 import { Metadata } from "next"
-import GoBack from "@/components/go-back"
 import { siteConfig } from "@/config/site"
+import GoBack from "@/components/go-back";
 
 export const metadata: Metadata = {
     title: {
-        default: siteConfig.name,
-        template: `%s - ${siteConfig.name}`,
+        default: 'Blog',
+        template: `%s - Tecnologia da Informação - CJFSWD`,
     },
-    description: siteConfig.description,
-    themeColor: [
-        { media: "(prefers-color-scheme: light)", color: "white" },
-        { media: "(prefers-color-scheme: dark)", color: "black" },
-    ],
+    description: 'Explore o mundo da Tecnologia da Informação. Fique por dentro das últimas tendências, dicas e insights sobre TI, inovação e transformação digital com foco na Web e Typescript.',
 }
 
 export default function CategoryLayout({ children, params }: { children: React.ReactNode, params: { slug: string } }) {
     return (<>
-        <section className="blog grid items-center pb-8 pl-2 pt-6 sm:container m:px-3 ml:px-4 md:py-10">
+        <section className="grid grid-cols-1 items-center gap-4 pb-8 pl-2 pt-6 sm:container m:px-3 ml:px-4">
             <GoBack />
-            <div className="max-w-[840px]">
-                {children}
-            </div>
+            {children}
         </section>
     </>)
 }

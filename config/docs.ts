@@ -18,6 +18,10 @@ export const docsConfig: DocsConfig = {
         {
             title: "Contato",
         },
+        {
+            title: "Privacidade",
+            href: "/privacidade"
+        },
         // {
         //     title: "Portfólio",
         //     href: "/portfolio",

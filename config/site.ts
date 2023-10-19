@@ -16,6 +16,10 @@ export const siteConfig = {
     {
       title: "Contato",
     },
+    {
+      title: "Privacidade",
+      href: '/privacidade'
+    },
     // {
     //   title: "Portfólio",
     //   href: "/portfolio",

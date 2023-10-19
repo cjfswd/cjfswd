@@ -5,10 +5,12 @@ export default function GoBack({ children }: { children?: React.ReactNode } = { 
     const router = useRouter()
 
     return (<>
-        <div className="mb-6 inline-block w-fit cursor-pointer text-lg font-bold" onClick={() => {
-            router.back()
-            router.push('/blog')
-        }}>{"<--"}</div>
+        <div
+            className="w-fit cursor-pointer whitespace-nowrap text-lg font-bold"
+            onClick={() => {
+                router.back()
+                router.push('/blog')
+            }}>{"<--"}</div>
         {children}
     </>)
 }

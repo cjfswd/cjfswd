@@ -2,71 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-
+    --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 215 20.2% 65.1%;
-
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142.1 76.2% 36.3%;
     --radius: 0.5rem;
   }
-
+ 
   .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
-
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
-
-    --accent: 216 34% 17%;
-    --accent-foreground: 210 40% 98%;
-
-    --popover: 224 71% 4%;
-    --popover-foreground: 215 20.2% 65.1%;
-
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
-
-    --card: 224 71% 4%;
-    --card-foreground: 213 31% 91%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
-
-    --secondary: 222.2 47.4% 11.2%;
-    --secondary-foreground: 210 40% 98%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 216 34% 17%;
-
-    --radius: 0.5rem;
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142.4 71.8% 29.2%;
   }
 }
 
@@ -80,20 +60,40 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
+  .blog a {
+    @apply underline text-green-500
+  }
+
   .blog h1 {
     @apply scroll-m-20 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl
+  }
+
+  .blog h1 > code:not([class]) {
+    @apply text-3xl sm:text-4xl lg:text-5xl tracking-tight
   }
 
   .blog h2 {
     @apply scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight transition-colors first:mt-0
   }
 
+  .blog h2 > code:not([class]) {
+    @apply text-2xl tracking-tight
+  }
+
   .blog h3 {
     @apply scroll-m-20 text-xl font-semibold tracking-tight sm:text-2xl
   }
 
+  .blog h3 > code:not([class]) {
+    @apply text-xl sm:text-2xl tracking-tight
+  }
+
   .blog h4 {
     @apply scroll-m-20 text-xl font-semibold tracking-tight
+  }
+
+  .blog h4 > code:not([class]) {
+    @apply text-xl tracking-tight
   }
 
   .blog p ~ p {
@@ -105,14 +105,22 @@
   }
 
   .blog h1 ~ div.grid:first-of-type {
-    @apply mt-12
+    @apply mt-8 sm:mt-12
   }
 
   .blog h1 + p:first-of-type {
-    @apply mt-12
+    @apply mt-8 sm:mt-12
   }
 
   .blog p + h2, .blog p + h3, .blog p + h4 {
+    @apply mt-10
+  }
+
+  .blog ol + h2, .blog ol + h3, .blog ol + h4 {
+    @apply mt-10
+  }
+
+  .blog ul + h2, .blog ul + h3, .blog ul + h4 {
     @apply mt-10
   }
 
@@ -126,6 +134,10 @@
 
   .blog h2 + div, .blog h3 + div, .blog h4 + div {
     @apply mt-2
+  }
+
+  .blog h2 + h3, .blog h2 + ol, .blog h2 +ul {
+    @apply mt-4
   }
 
   .blog ol p,
@@ -145,16 +157,49 @@
     @apply my-6 ml-6 list-disc [&>li]:mt-2
   }
 
-  .blog code {
+  .blog ol {
+    @apply my-6 ml-6 list-disc [&>li]:mt-2
+  }
+
+  .blog code:not([class])  {
     @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold
+  }
+
+  .blog pre  {
+    @apply my-4
+  }
+
+  .blog [style*="display: block; overflow-x: auto; padding: 0.5em; color: rgb(171, 178, 191); background: rgb(40, 44, 52);"] {
+    @apply rounded-md
   }
 
   .blog small {
     @apply text-sm font-medium leading-none
   }
 
+  .blog table {
+    @apply border border-muted my-4 w-full table-fixed
+  }
+
+  .blog table th, .blog table td {
+    @apply border border-muted px-2 py-1 w-fit;
+  }
+
+  .blog ul {
+    @apply list-disc list-inside flex flex-col mt-2 gap-1 ml-6
+  }
+
+  .blog ol {
+    @apply list-decimal list-inside flex flex-col mt-2 gap-3
+  }
+
+  .blog li::marker {
+    @apply text-lg font-semibold
+  }
+
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
+    height: 12px;
   }
   
   ::-webkit-scrollbar-track {

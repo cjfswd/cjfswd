@@ -34,3 +34,9 @@ yarn-error.log*
 
 .contentlayer
 .env
+
+# obsidian
+obsidian/_oculto/
+
+# old pages
+app/(pages)/_ignore

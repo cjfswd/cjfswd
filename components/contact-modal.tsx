@@ -28,7 +28,7 @@ export default function DialogDemo({ children, key }: { children?: React.ReactEl
                     </DialogDescription>
                 </DialogHeader>
                 <DialogFooter className="flex flex-col gap-2 sm:flex-col sm:space-x-0">
-                    <Link href='https://wa.me/5521976067823' className="w-full" target="_blank" rel="noreferrer" prefetch={false}><Button className="flex h-full w-full flex-col ml:flex-row ml:gap-2"><Icons.whatsapp className="h-4" /><div>whatsapp</div><div className="hidden ml:block">-</div><div>55 21 9 7606-7823</div></Button></Link>
+                    <Link href='https://t.me/cjfswd' className="w-full" target="_blank" rel="noreferrer" prefetch={false}><Button className="flex h-full w-full flex-col ml:flex-row ml:gap-2"><Icons.telegram className="h-4" /><div>telegram</div><div className="hidden ml:block">-</div><div>Username: @cjfswd</div></Button></Link>
                     <Link href='https://discordapp.com/users/120199416597577732' className="w-full" target="_blank" rel="noreferrer" prefetch={false}><Button className="flex h-full w-full flex-col ml:flex-row ml:gap-2"><Icons.discord className="h-4" /><div>discord</div><div className="hidden ml:block">-</div><div>ID: 120199416597577732</div></Button></Link>
                 </DialogFooter>
             </DialogContent>
