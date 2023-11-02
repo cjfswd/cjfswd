@@ -16,8 +16,8 @@ import GoogleAds from "@/components/google-ads"
 
 export const metadata: Metadata = {
   title: {
-    default: 'Desenvolvedor Web Fullstack Typescript',
-    template: `%s - CJFSWD`,
+    default: 'Desenvolvedor Web Fullstack - Castillo Junior',
+    template: `%s - Castillo Junior`,
   },
   description: 'Bem-vindo ao mundo da inovação e tecnologia! Eu sou um desenvolvedor web fullstack especializado em TypeScript, e estou pronto para ajudar a transformar suas ideias em realidade. Se você está em busca de serviços de desenvolvimento de sistemas, você está no lugar certo.',
   other: {

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: undefined,
     },
-    sitemap: 'https://cjfswd.vercel.app/sitemap.xml',
+    sitemap: 'https://desenvolvedor-web-fullstack.castillojr.com.br/sitemap.xml',
   }
 }

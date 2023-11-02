@@ -86,16 +86,19 @@ export default async function IndexPage() {
           Fullstack Web Developer.
         </h1>
         <p className="max-w-[700px] text-base text-muted-foreground sm:text-xl">
-          Olá! Meu nome é Castillo Junior, sou um desenvolvedor de software, moro no Rio de Janeiro, adoro tecnologia e gosto de trabalhar em projetos desafiadores nos quais posso aplicar minha expertise de maneira inovadora.
+          Olá! você me chamar de CJ, sou um desenvolvedor de software, adoro tecnologia e gosto de trabalhar em projetos desafiadores nos quais posso aplicar minha expertise de maneira inovadora.
         </p>
       </div>
       <div className="flex w-fit flex-col flex-wrap justify-start gap-3 text-xl font-bold ml:flex-row ml:gap-x-4 ml:gap-y-3 sm:gap-6 sm:text-2xl [&>*]:flex [&>*]:cursor-pointer [&>*]:items-center [&>*]:gap-1">
-        <Link className="flex" href='https://cjfswd.vercel.app/curriculo_antonio_carlos_del_castillo_junior.pdf' rel="noopener noreferrer" target="_blank" prefetch={false}>
+        <Link className="flex" href='/curriculo_antonio_carlos_del_castillo_junior.pdf' rel="noopener noreferrer" target="_blank" prefetch={false}>
           <Icons.paperclip />currículo
         </Link>
         <Link className="flex" href='https://github.com/cjfswd/' rel="noopener noreferrer" target="_blank" prefetch={false}>
           <Icons.gitHub className="w-[24px]" />github
         </Link>
+        {/* <Link className="flex" href='https://github.com/cjfswd/' rel="noopener noreferrer" target="_blank" prefetch={false}>
+          <Image src={'/youtube.svg'} width={24} height={24} alt="youtube icon" />youtube
+        </Link> */}
         {/* <Link className="flex" href='https://cjfswd.vercel.app/template_contrato.pdf' rel="noopener noreferrer" target="_blank" prefetch={false}>
           <Icons.scroll />contrato
         </Link> */}
@@ -103,48 +106,48 @@ export default async function IndexPage() {
       <div className="mt-4 max-w-[700px] text-lg">
         <h2 className="mb-1 text-lg font-semibold leading-6">minhas tecnologias favoritas...</h2>
         <div className="flex w-full flex-wrap gap-2 text-lg">
-          <p className="flex w-fit gap-2 rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
+          <p className="flex w-fit gap-2 rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
             <Image src={'/nodedotjs.svg'} width={20} height={20} alt={"node icon"} style={{ filter: "invert(48%) sepia(71%) saturate(449%) hue-rotate(71deg) brightness(88%) contrast(94%)" }} />
             node
           </p>
-          <p className="flex w-fit gap-2 rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
-            <Image src={'/typescript.svg'} width={20} height={20} alt={"node icon"} style={{ filter: "invert(41%) sepia(50%) saturate(711%) hue-rotate(170deg) brightness(95%) contrast(95%)" }} />
+          <p className="flex w-fit gap-2 rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
+            <Image src={'/typescript.svg'} width={20} height={20} alt={"typescript icon"} style={{ filter: "invert(41%) sepia(50%) saturate(711%) hue-rotate(170deg) brightness(95%) contrast(95%)" }} />
             typescript
           </p>
-          <p className="flex w-fit gap-2 rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
-            <Image src={'/tailwindcss.svg'} width={20} height={20} alt={"node icon"} style={{ filter: "invert(80%) sepia(41%) saturate(7435%) hue-rotate(146deg) brightness(92%) contrast(95%)" }} />
+          <p className="flex w-fit gap-2 rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
+            <Image src={'/tailwindcss.svg'} width={20} height={20} alt={"tailwind icon"} style={{ filter: "invert(80%) sepia(41%) saturate(7435%) hue-rotate(146deg) brightness(92%) contrast(95%)" }} />
             tailwind
           </p>
-          <p className="flex w-fit gap-2 rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
-            <Image src={'/neo4j.svg'} width={20} height={20} alt={"node icon"} style={{ filter: "invert(49%) sepia(29%) saturate(943%) hue-rotate(171deg) brightness(90%) contrast(93%)" }} />
+          <p className="flex w-fit gap-2 rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
+            <Image src={'/neo4j.svg'} width={20} height={20} alt={"neo4j icon"} style={{ filter: "invert(49%) sepia(29%) saturate(943%) hue-rotate(171deg) brightness(90%) contrast(93%)" }} />
             neo4j
           </p>
-          <p className="flex w-fit gap-2 rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
+          <p className="flex w-fit gap-2 rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
             <Image src={'/postgresql.svg'} width={20} height={20} alt={"node icon"} style={{ filter: "invert(44%) sepia(68%) saturate(5631%) hue-rotate(217deg) brightness(96%) contrast(83%)" }} />
             postgreSQL
           </p>
-          <p className="flex w-fit gap-2 rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
-            <Image src={'/mongodb.svg'} width={20} height={20} alt={"node icon"} style={{ filter: "invert(50%) sepia(67%) saturate(382%) hue-rotate(72deg) brightness(94%) contrast(95%)" }} />
+          <p className="flex w-fit gap-2 rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
+            <Image src={'/mongodb.svg'} width={20} height={20} alt={"mongodb icon"} style={{ filter: "invert(50%) sepia(67%) saturate(382%) hue-rotate(72deg) brightness(94%) contrast(95%)" }} />
             mongoDB
           </p>
-          <p className="flex w-fit gap-2 rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
+          <p className="flex w-fit gap-2 rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
             <Image src={'/redis.svg'} width={20} height={20} alt={"node icon"} style={{ filter: "invert(28%) sepia(85%) saturate(2318%) hue-rotate(345deg) brightness(89%) contrast(93%)" }} />
             redis
           </p>
-          <p className="flex w-fit gap-2 rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1  leading-none text-white">
-            <Image src={'/jest.svg'} width={20} height={20} alt={"node icon"} style={{ filter: "invert(13%) sepia(71%) saturate(4530%) hue-rotate(344deg) brightness(97%) contrast(99%)" }} />
+          <p className="flex w-fit gap-2 rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2  py-1 leading-none text-white">
+            <Image src={'/jest.svg'} width={20} height={20} alt={"jest icon"} style={{ filter: "invert(13%) sepia(71%) saturate(4530%) hue-rotate(344deg) brightness(97%) contrast(99%)" }} />
             jest
           </p>
-          <p className="flex w-fit gap-2 rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
-            <Image src={'/playwright.svg'} width={20} height={20} alt={"node icon"} style={{ filter: "invert(49%) sepia(80%) saturate(478%) hue-rotate(73deg) brightness(95%) contrast(87%)" }} />
+          <p className="flex w-fit gap-2 rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
+            <Image src={'/playwright.svg'} width={20} height={20} alt={"playwright icon"} style={{ filter: "invert(49%) sepia(80%) saturate(478%) hue-rotate(73deg) brightness(95%) contrast(87%)" }} />
             playwright
           </p>
-          <p className="flex w-fit gap-2 rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
-            <Image src={'/nextdotjs.svg'} width={20} height={20} alt={"node icon"} style={{ filter: "invert(100%) sepia(100%) saturate(0%) hue-rotate(47deg) brightness(105%) contrast(102%)" }} />
+          <p className="flex w-fit gap-2 rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
+            <Image src={'/nextdotjs.svg'} width={20} height={20} alt={"nextjs icon"} style={{ filter: "invert(100%) sepia(100%) saturate(0%) hue-rotate(47deg) brightness(105%) contrast(102%)" }} />
             next
           </p>
-          <p className="flex w-fit gap-2 rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
-            <Image src={'/vercel.svg'} width={20} height={20} alt={"node icon"} style={{ filter: "invert(100%) sepia(100%) saturate(0%) hue-rotate(47deg) brightness(105%) contrast(102%)" }} />
+          <p className="flex w-fit gap-2 rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 leading-none text-white">
+            <Image src={'/vercel.svg'} width={20} height={20} alt={"vercel icon"} style={{ filter: "invert(100%) sepia(100%) saturate(0%) hue-rotate(47deg) brightness(105%) contrast(102%)" }} />
             vercel
           </p>
         </div>
@@ -153,41 +156,40 @@ export default async function IndexPage() {
       <div className="mt-4 max-w-[700px] text-lg">
         <h2 className="mb-1 text-lg font-semibold leading-6">minhas melhores skills...</h2>
         <div className="flex w-full flex-wrap gap-2">
-          <p className="w-fit rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
+          <p className="w-fit rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
             layout responsivo
           </p>
-          <p className="w-fit rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
+          <p className="w-fit rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
             programação
           </p>
-          <p className="w-fit rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
+          <p className="w-fit rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
             modelagem de banco de dados
           </p>
-          <p className="w-fit rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
+          <p className="w-fit rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
             API Restfull
           </p>
-          <p className="w-fit rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
+          <p className="w-fit rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
             gateway de pagamentos
           </p>
-          <p className="w-fit rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
+          <p className="w-fit rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
             testes
           </p>
-          <p className="w-fit rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
+          <p className="w-fit rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
             versionamento
           </p>
-          <p className="w-fit rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
+          <p className="w-fit rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
             aplicação de página única SPA
           </p>
-
-          <p className="w-fit rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
+          <p className="w-fit rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
             sistema CMS
           </p>
-          <p className="w-fit rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
+          <p className="w-fit rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
             sistema MVC
           </p>
-          <p className="w-fit rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
+          <p className="w-fit rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
             implantação
           </p>
-          <p className="w-fit rounded bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
+          <p className="w-fit rounded border bg-gradient-to-t from-black from-20% to-[#0F0F0F] to-80% px-2 py-1 text-[15px] leading-none text-white">
             documentação
           </p>
         </div>

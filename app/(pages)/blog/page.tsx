@@ -13,7 +13,7 @@ export default async function Page() {
         <div className="flex max-w-[600px] flex-col justify-center gap-4 text-base">{
             listArchives(tree as TreeNode, 'md')
                 .map((item, key) => <Link
-                    href={`/blog${process.env.NODE_ENV == 'development' ? item.fullUrl : item.fullUrl.replace('/vercel/obsidian', '')}`}
+                    href={`/blog${process.env.NODE_ENV == 'development' ? item.partialUrl : item.partialUrl.replace('/vercel/obsidian', '')}`}
                     className="flex w-full flex-col gap-2 rounded border px-3 pb-3 pt-2"
                     key={key}
                 >

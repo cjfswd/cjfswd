@@ -1,8 +1,8 @@
 import * as yaml from 'js-yaml';
-import Markdown from 'markdown-to-jsx'
+import { notFound } from 'next/navigation'
 import fs from 'fs';
 import React from "react";
-import { removeNodesWithEmptyChildren, removeFilesWithSameNameAsDirectory, buildTree, findNodeByFullUrl, TreeNode, convertToFriendlyURL } from '@/lib/blog';
+import { removeNodesWithEmptyChildren, removeFilesWithSameNameAsDirectory, buildTree, findNodeByFullUrl, TreeNode, convertToFriendlyURL, findNodeByPartialUrl } from '@/lib/blog';
 import { CustomMarkdown, MarkdownWithCustomHighlighter } from '@/components/ui/markdown';
 import { Metadata, ResolvingMetadata } from 'next';
 import { getFiles } from '@/lib/file-system';
@@ -61,7 +61,7 @@ export async function generateMetadata(
   const mypath = slug.join('/').toString()
   const files = getFiles(path.resolve(process.cwd(), 'obsidian')).filter(file => file.includes('.md'))
   const tree = removeNodesWithEmptyChildren(removeFilesWithSameNameAsDirectory(buildTree(files))) as TreeNode
-  const actualTree = findNodeByFullUrl(tree, process.env.NODE_ENV == 'development' ? `/${mypath}` : `/obsidian/${mypath}`)
+  const actualTree = findNodeByPartialUrl(tree, process.env.NODE_ENV == 'development' ? `/${mypath}` : `/obsidian/${mypath}`)
   console.log({ mypath, files, tree, actualTree, URI: process.env.NODE_ENV == 'development' ? `/obsidian/${mypath}` : `/vercel/path0/obsidian/${mypath}` })
   let readTest = actualTree && fs.readFileSync(process.env.NODE_ENV == 'development' ? actualTree.fullName.replace('/', '') : actualTree.fullName).toString('utf-8')
   const post = readTest && extractFrontmatter(readTest)
@@ -79,7 +79,7 @@ export async function generateMetadata(
       siteName: 'CJFSWD',
       locale: 'pt_BR',
       type: 'article',
-      url: `https://cjfswd.vercel.app/${actualTree?.fullUrl}`,
+      url: `https://cjfswd.vercel.app/${actualTree?.partialUrl}`,
       images: [`https://dynamic-og-image-generator.vercel.app//api/generate?title=${actualTree?.name}&author=Antonio%20Carlos%20Del%20Castillo%20Junior&websiteUrl=https://cjfswd.vercel.app&theme=Default`],
     },
   }
@@ -89,7 +89,8 @@ export default async function Page({ params: { slug } }: { params: { slug: strin
   const mypath = slug.join('/').toString()
   const files = getFiles(path.resolve(process.cwd(), 'obsidian')).filter(file => file.includes('.md'))
   const tree = removeNodesWithEmptyChildren(removeFilesWithSameNameAsDirectory(buildTree(files))) as TreeNode
-  const actualTree = findNodeByFullUrl(tree, process.env.NODE_ENV == 'development' ? `/${mypath}` : `/obsidian/${mypath}`)
+  // const actualTree = findNodeByPartialUrl(tree, process.env.NODE_ENV == 'development' ? `/${mypath}` : `/obsidian/${mypath}`)
+  const actualTree = findNodeByPartialUrl(tree, process.env.NODE_ENV == 'development' ? `/${mypath}` : `/${mypath}`)
   console.log({ mypath, files, tree, actualTree, URI: process.env.NODE_ENV == 'development' ? `/obsidian/${mypath}` : `/vercel/path0/obsidian/${mypath}` })
   let readTest = actualTree && fs.readFileSync(process.env.NODE_ENV == 'development' ? actualTree.fullName.replace('/', '') : actualTree.fullName).toString('utf-8')
   const post = readTest && extractFrontmatter(readTest)
@@ -113,7 +114,7 @@ export default async function Page({ params: { slug } }: { params: { slug: strin
       }
     }
   )
-
+  if (readTest == undefined) notFound()
 
   return (<MarkdownWithCustomHighlighter>
     {/* {readTest ? readTest : JSON.stringify({ mypath, files, tree, actualTree, URI: `/obsidian/${mypath}` })} */}

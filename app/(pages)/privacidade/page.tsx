@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default async function Page() {
 
-    return (<section className='blog container py-6'>
+    return (<section className='blog container py-6 md:py-10'>
         <header className='mb-6'>
             <h1>Política de Privacidade</h1>
         </header>

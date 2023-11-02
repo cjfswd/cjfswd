@@ -183,6 +183,26 @@ export function findNodeByFullUrl(root: TreeNode, fullUrlToFind: string): TreeNo
     return undefined;
 }
 
+export function findNodeByPartialUrl(root: TreeNode, partialUrlToFind: string): TreeNode | undefined {
+    // Check if the current node's fullUrl matches the one we're looking for
+    if (root.partialUrl === partialUrlToFind) {
+        return root;
+    }
+
+    // If the current node has children, recursively search in each child
+    if (root.children) {
+        for (const child of root.children) {
+            const foundNode = findNodeByPartialUrl(child, partialUrlToFind);
+            if (foundNode) {
+                return foundNode; // If found in a child, return the result
+            }
+        }
+    }
+
+    // If the node is not found in the current node or its children, return undefined
+    return undefined;
+}
+
 export function filterTreeNodesByExtension(node: TreeNode, extensionToFilter: string): TreeNode | undefined {
     // If the current node has the desired extension, keep it, otherwise, exclude it
     if (node.extension === extensionToFilter) {

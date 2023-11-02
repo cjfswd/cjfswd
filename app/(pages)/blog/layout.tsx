@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function CategoryLayout({ children, params }: { children: React.ReactNode, params: { slug: string } }) {
     return (<>
-        <section className="grid grid-cols-1 items-center gap-4 pb-8 pl-2 pt-6 sm:container m:px-3 ml:px-4">
+        <section className="grid grid-cols-1 items-center gap-4 pb-8 pl-2 pt-6 sm:container m:px-3 ml:px-4 md:py-10">
             <GoBack />
             {children}
         </section>
