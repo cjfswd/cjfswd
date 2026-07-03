@@ -1,6 +1,6 @@
 # Castillo Junior
 
-Liderança técnica de TI em ambiente corporativo. Engenharia de software full stack como base.
+Tech Lead em ambiente corporativo. Engenharia de software fullstack como base.
 
 ## Perfil
 
